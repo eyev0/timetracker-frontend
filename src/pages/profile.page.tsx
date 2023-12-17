@@ -67,23 +67,10 @@ const ProfilePage = () => {
             <p>Loading...</p>
           ) : (
             <div className="flex items-center gap-8">
-              <div>
-                <img
-                  src={
-                    user.photo.includes("default.png")
-                      ? `http://localhost:8000/api/images/${user.photo}`
-                      : user.photo
-                  }
-                  className="max-h-36"
-                  alt={`profile photo of ${user.name}`}
-                />
-              </div>
               <div className="mt-8">
                 <p className="mb-3">ID: {user.id}</p>
                 <p className="mb-3">Name: {user.name}</p>
                 <p className="mb-3">Email: {user.email}</p>
-                <p className="mb-3">Role: {user.role}</p>
-                <p className="mb-3">Provider: {user.provider}</p>
               </div>
             </div>
           )}
